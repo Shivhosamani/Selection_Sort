@@ -1,0 +1,41 @@
+#include<iostream>
+using namespace std;
+
+int SelectionSort(int arr[],int n)
+{
+    for(int i=0;i<n-1;i++)
+    {
+        int min_idx=i; // initializing 0th index value as minimum
+
+    for(int j=i+1;j<n;j++){
+        if(arr[min_idx]>arr[j])
+        {
+            int temp=j;
+            swap(min_idx,arr[i]);
+            min_idx=temp;
+          
+        }
+    }
+    }
+}
+
+
+int main()
+{
+
+    int n;
+    cout<<" enter size : "<<endl;
+    cin>>n;
+    int arr[n];
+    cout<<" enter elements : "<<endl;
+    for(int i=0;i<n;i++)
+    {
+        cin>>arr[i];
+    }
+    SelectionSort(arr,n);
+    cout<<" After Sorting : "<<endl;
+      for(int i=0;i<n;i++)
+    {
+        cout<<arr[i]<<" ";
+    }
+}
